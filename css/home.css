@@ -1,0 +1,541 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Microsoft YaHei", "SimSun", serif;
+        background:
+            radial-gradient(circle at top, rgba(120, 20, 30, 0.25), transparent 60%),
+            linear-gradient(180deg, #1a1a1c 0%, #2a2728 50%, #1a1a1c 100%);
+        color: #e8e4df;
+        min-height: 100vh;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /* 顶部站点标题 */
+    .site-header {
+        position: relative;
+        padding: 50px 20px 40px;
+        text-align: center;
+        border-bottom: 2px solid #8b1820;
+        overflow: hidden;
+    }
+
+    .site-header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(139, 24, 32, 0.35), rgba(0, 0, 0, 0.6) 60%);
+        z-index: 0;
+    }
+
+    .header-inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    .site-title {
+        font-size: clamp(36px, 6vw, 64px);
+        letter-spacing: 12px;
+        color: #c21f2a;
+        font-weight: 900;
+        text-shadow: 0 0 18px rgba(194, 31, 42, 0.45), 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .site-subtitle {
+        margin-top: 10px;
+        font-size: 13px;
+        letter-spacing: 5px;
+        color: #b9b6b1;
+        font-style: italic;
+    }
+
+    .site-tags {
+        margin-top: 14px;
+        font-size: 12px;
+        color: #8f8a84;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+    }
+
+    /* ========== 艾琳悬浮头图（矮款） ========== */
+    .iren-banner {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 30px;
+        align-items: center;
+        background: linear-gradient(135deg, rgba(120, 20, 30, 0.22), rgba(0, 0, 0, 0.5));
+        border: 1px solid #7a141c;
+        padding: 24px 40px;
+        margin-bottom: 60px;
+        position: relative;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .iren-banner::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        border: 1px solid rgba(194, 31, 42, 0.35);
+        pointer-events: none;
+    }
+
+    .iren-label {
+        font-size: 12px;
+        letter-spacing: 6px;
+        color: #e06d76;
+        margin-bottom: 8px;
+    }
+
+    .iren-name {
+        font-size: 32px;
+        color: #fff;
+        letter-spacing: 8px;
+        margin-bottom: 8px;
+        text-shadow: 0 0 20px rgba(194, 31, 42, 0.5);
+    }
+
+    .iren-role {
+        font-size: 14px;
+        color: #c7c2bc;
+        margin-bottom: 14px;
+        letter-spacing: 2px;
+    }
+
+    .iren-text {
+        font-size: 13px;
+        line-height: 1.8;
+        color: #b9b6b1;
+        margin-bottom: 16px;
+    }
+
+    .iren-link {
+        display: inline-block;
+        padding: 10px 28px;
+        background: #8b1820;
+        color: #fff;
+        letter-spacing: 4px;
+        font-size: 12px;
+        border: 1px solid #c21f2a;
+        transition: 0.3s;
+    }
+
+    .iren-link:hover {
+        background: #c21f2a;
+        box-shadow: 0 0 14px rgba(194, 31, 42, 0.5);
+    }
+
+    .iren-visual {
+        position: relative;
+        aspect-ratio: 16 / 7;
+        background: linear-gradient(160deg, #2a2122, #0d0c0d);
+        border: 1px solid #5a1018;
+        overflow: hidden;
+    }
+
+    .iren-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .iren-visual::after {
+        content: "艾琳档案";
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        padding: 6px 12px;
+        background: rgba(0, 0, 0, 0.55);
+        color: #e8c6ca;
+        font-size: 11px;
+        letter-spacing: 3px;
+        border: 1px solid #8b1820;
+    }
+
+    /* ========== 阵营区块 ========== */
+    .camp-block {
+        margin-bottom: 60px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid #3a3536;
+        border-top: 3px solid #a51822;
+    }
+
+    .camp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
+        margin-bottom: 24px;
+        border-bottom: 1px dashed #5a4446;
+        padding-bottom: 16px;
+    }
+
+    .camp-name {
+        font-size: 28px;
+        color: #e6e1dc;
+        letter-spacing: 5px;
+    }
+
+    .camp-name span {
+        color: #d92a37;
+    }
+
+    .camp-summary {
+        max-width: 700px;
+        color: #9f9a94;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    /* 分组标题 + 折叠按钮 */
+    .group-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 26px 0 16px;
+    }
+
+    .group-title {
+        font-size: 15px;
+        color: #e06d76;
+        padding-left: 12px;
+        border-left: 4px solid #c21f2a;
+        letter-spacing: 4px;
+        flex: 1;
+    }
+
+    .toggle-btn {
+        background: none;
+        border: none;
+        color: #e06d76;
+        font-size: 14px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        padding: 4px 8px;
+    }
+
+    .toggle-btn.collapsed {
+        transform: rotate(-90deg);
+    }
+
+    /* ========== NPC 区：左侧领袖固定 + 右侧普通NPC滚动 ========== */
+    .npc-wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* 左侧：领袖固定区域 */
+    .npc-leader-fixed {
+        flex: 0 0 auto;
+        flex-shrink: 0;
+    }
+
+    /* 右侧：普通NPC滚动区域 */
+    .npc-scroll-container {
+        flex: 1 1 auto;
+        position: relative;
+        overflow: hidden;
+        padding: 0 44px;
+    }
+
+    .npc-scroll-box {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 6px 0;
+    }
+
+    .npc-scroll-box::-webkit-scrollbar {
+        display: none;
+    }
+
+    .npc-track {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        width: max-content;
+    }
+
+    /* 领导人卡片：更大、高亮 */
+    .char-card.leader {
+        width: 240px;
+        border: 2px solid #c21f2a;
+        box-shadow: 0 0 18px rgba(194, 31, 42, 0.35);
+    }
+
+    .char-card.leader .char-thumb {
+        aspect-ratio: 3 / 4;
+    }
+
+    .char-card.leader .char-tag {
+        background: #c21f2a;
+        font-size: 11px;
+        padding: 4px 10px;
+        letter-spacing: 3px;
+    }
+
+    /* 普通 NPC：约领导人 95% */
+    .npc-track .char-card {
+        flex: 0 0 auto;
+        width: 228px;
+        transform: scale(0.95);
+        transform-origin: center center;
+    }
+
+    .npc-track .char-card .char-thumb {
+        aspect-ratio: 3 / 4;
+    }
+
+    /* NPC 区左右箭头（只在滚动区域内） */
+    .npc-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(139, 24, 32, 0.85);
+        border: 1px solid #c21f2a;
+        color: #fff;
+        cursor: pointer;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        transition: 0.2s;
+    }
+
+    .npc-arrow:hover {
+        background: #c21f2a;
+    }
+
+    .npc-arrow.left {
+        left: 0;
+    }
+
+    .npc-arrow.right {
+        right: 0;
+    }
+
+    /* ========== 企友角色 两排横向滚动（默认收起） ========== */
+    .member-wrap {
+        position: relative;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        max-height: 820px;
+        opacity: 1;
+    }
+
+    .member-wrap.hidden {
+        max-height: 0;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .member-scroll-box {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 10px 44px;
+    }
+
+    .member-scroll-box::-webkit-scrollbar {
+        display: none;
+    }
+
+    .member-track {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-auto-flow: column;
+        gap: 18px;
+        width: max-content;
+    }
+
+    .scroll-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(139, 24, 32, 0.85);
+        border: 1px solid #c21f2a;
+        color: #fff;
+        cursor: pointer;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        transition: 0.2s;
+    }
+
+    .scroll-arrow:hover {
+        background: #c21f2a;
+    }
+
+    .scroll-arrow.left {
+        left: 0;
+    }
+
+    .scroll-arrow.right {
+        right: 0;
+    }
+
+    /* ========== 通用人物卡片 ========== */
+    .char-card {
+        background: linear-gradient(180deg, #242122, #141213);
+        border: 1px solid #5a1018;
+        overflow: hidden;
+        transition: 0.35s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .char-card:hover {
+        transform: translateY(-4px);
+        border-color: #c21f2a;
+        box-shadow: 0 8px 20px rgba(194, 31, 42, 0.25);
+    }
+
+    .char-card.leader:hover {
+        transform: translateY(-4px) scale(1.02);
+    }
+
+    .npc-track .char-card:hover {
+        transform: scale(0.95) translateY(-4px);
+    }
+
+    .char-thumb {
+        background: #1a1819;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .char-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .char-tag {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: #8b1820;
+        color: #fff;
+        font-size: 10px;
+        padding: 3px 8px;
+        letter-spacing: 2px;
+    }
+
+    .char-body {
+        padding: 12px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .char-name {
+        font-size: 16px;
+        color: #f2eeea;
+        letter-spacing: 2px;
+    }
+
+    .char-role {
+        font-size: 12px;
+        color: #b9b6b1;
+        line-height: 1.5;
+        flex: 1;
+    }
+
+    .char-link {
+        margin-top: 6px;
+        font-size: 11px;
+        color: #e06d76;
+        letter-spacing: 2px;
+        text-align: right;
+    }
+
+    /* 企友卡片：与普通 NPC 同等尺寸 */
+    .member-track .char-card {
+        width: 228px;
+    }
+
+    .member-track .char-thumb {
+        aspect-ratio: 3 / 4;
+    }
+
+    .member-track .char-name {
+        font-size: 15px;
+    }
+
+    .member-track .char-role {
+        font-size: 12px;
+    }
+
+    /* 底部 */
+    .site-footer {
+        text-align: center;
+        padding: 30px 20px;
+        color: #7a7570;
+        font-size: 12px;
+        letter-spacing: 3px;
+        border-top: 1px solid #3a2024;
+    }
+
+    @media (max-width: 900px) {
+        .iren-banner {
+            grid-template-columns: 1fr;
+            padding: 20px;
+        }
+        .iren-name {
+            font-size: 26px;
+        }
+        .camp-block {
+            padding: 20px;
+        }
+        .camp-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .npc-wrap {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .char-card.leader {
+            width: 100%;
+        }
+        .char-card.leader .char-thumb {
+            aspect-ratio: 16 / 9;
+        }
+        .npc-track .char-card {
+            width: 190px;
+        }
+        .member-track .char-card {
+            width: 190px;
+        }
+		.npc-scroll-box, .member-scroll-box{
+		-webkit-overflow-scrolling: touch;
+		}
+    }
