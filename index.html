@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>绯红帷幕之下</title>
+
+<link rel="stylesheet" href="css/home.css" />
+
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <h1 class="site-title">绯红帷幕之下</h1>
+        <p class="site-subtitle">Beneath the Crimson Curtain</p>
+        <p class="site-tags">帷幕从不说谎，它只是不会告诉你真相。</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- 艾琳悬浮头图（矮款） -->
+    <section class="iren-banner">
+        <div class="iren-text-block">
+            <div class="iren-label">★ 头条档案 · TOP PROFILE</div>
+            <h2 class="iren-name">艾琳·梅利特</h2>
+            <p class="iren-role">歌剧名伶 · 故事核心人物</p>
+            <p class="iren-text">
+                帷幕深处最耀眼的歌声，两阵营围绕与调查的关键人物。
+            </p>
+            <a class="iren-link" href="iren.html">进入档案</a>
+        </div>
+        <div class="iren-visual">
+            <img src="img/index/I.jpg" alt="封面" />
+        </div>
+    </section>
+
+    <!-- ========== 歌剧院阵营 ========== -->
+    <section class="camp-block">
+        <div class="camp-header">
+            <h2 class="camp-name">帕尔戈萨<span>歌剧院</span></h2>
+            <p class="camp-summary">
+                院长卡厄斯统领，歌者、乐手、指挥、导演、匠人、守卫共同构成的舞台世界。帷幕之上、帷幕之间、帷幕之下，维持着歌剧院的荣光与秘密。
+            </p>
+        </div>
+
+        <!-- NPC 区：左侧领袖固定 + 右侧普通NPC滑动 -->
+        <div class="group-header">
+            <h3 class="group-title">NPC</h3>
+        </div>
+
+        <div class="npc-wrap">
+            <!-- 左侧：领袖固定不动 -->
+            <div class="npc-leader-fixed">
+                <a href="./html/K.html" class="char-card leader">
+                    <div class="char-thumb">
+                            <picture>
+                                <!-- 屏幕小于900px，加载横版16:9图片 -->
+                                <source media="(max-width:900px)" srcset="img/index/K1.png">
+                                <!-- PC端加载3:4竖版原图 -->
+                                <img src="img/index/K.png" alt="卡厄斯">
+                            </picture>
+                        <span class="char-tag">领袖</span>
+                    </div>
+                    <div class="char-body">
+                        <h4 class="char-name">卡厄斯</h4>
+                        <p class="char-role">歌剧院院长 · 帷幕之上</p>
+                        <span class="char-link">查看档案 →</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 右侧：普通NPC可横向滚动 -->
+            <div class="npc-scroll-container">
+                <button class="npc-arrow left" data-npc-scroll="opera-npc-track">‹</button>
+                <div class="npc-scroll-box">
+                    <div class="npc-track" id="opera-npc-track">
+                        <a href="./html/K-01.html" class="char-card">
+                            <div class="char-thumb">
+                                <img src="img/index/K-01.png" alt="歌剧院NPC" />
+                                <span class="char-tag">NPC</span>
+                            </div>
+                            <div class="char-body">
+                                <h4 class="char-name">薇奥莱·阿什福德</h4>
+                                <p class="char-role">次席女高音</p>
+                                <span class="char-link">查看档案 →</span>
+                            </div>
+                        </a>
+                        <a href="./html/K-02.html" class="char-card">
+                            <div class="char-thumb">
+                                <img src="img/index/K-02.png" alt="歌剧院NPC" />
+                                <span class="char-tag">NPC</span>
+                            </div>
+                            <div class="char-body">
+                                <h4 class="char-name">姜文</h4>
+                                <p class="char-role">歌剧院指挥</p>
+                                <span class="char-link">查看档案 →</span>
+                            </div>
+                        </a>
+                        <a href="./html/K-03.html" class="char-card">
+                            <div class="char-thumb">
+                                <img src="img/index/K-03.png" alt="歌剧院NPC" />
+                                <span class="char-tag">NPC</span>
+                            </div>
+                            <div class="char-body">
+                                <h4 class="char-name">洢</h4>
+                                <p class="char-role">杂活女仆</p>
+                                <span class="char-link">查看档案 →</span>
+                            </div>
+                        </a>
+                        <a href="./html/K-04.html" class="char-card">
+                            <div class="char-thumb">
+                                <img src="img/index/K-04.png" alt="歌剧院NPC" />
+                                <span class="char-tag">NPC</span>
+                            </div>
+                            <div class="char-body">
+                                <h4 class="char-name">夏尔·歇迪亚</h4>
+                                <p class="char-role">道具间杂工</p>
+                                <span class="char-link">查看档案 →</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="npc-arrow right" data-npc-scroll="opera-npc-track">›</button>
+            </div>
+        </div>
+
+        <!-- 企友角色区（默认收起） -->
+        <div class="group-header">
+            <h3 class="group-title">阵营成员</h3>
+            <button class="toggle-btn collapsed" data-target="opera-member">▶</button>
+        </div>
+        <div class="member-wrap hidden" id="opera-member">
+            <button class="scroll-arrow left" data-scroll="opera-track">‹</button>
+            <div class="member-scroll-box">
+                <div class="member-track" id="opera-track">
+                    <a href="./html/K1-01.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-01.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">伊沃·索恩</h4><p class="char-role">投资人</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-02.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-02.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">Celeste</h4><p class="char-role">小提琴</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-03.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-03.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">予羽</h4><p class="char-role">钢琴家</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-04.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-04.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">洛清羽</h4><p class="char-role">艺术总监</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-05.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-05.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">伊莉薇尔</h4><p class="char-role">编剧</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-06.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-06.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">伊斯梅尔·艾斯波西托</h4><p class="char-role">歌手</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-07.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-07.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">琉奈尔</h4><p class="char-role">曲作</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-08.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-08.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">铃兔</h4><p class="char-role">歌剧演员</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-09.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-09.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">senya</h4><p class="char-role">指挥</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-10.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-10.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">Lyra Sean</h4><p class="char-role">编剧</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-11.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-11.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">Willa Cynthia</h4><p class="char-role">舞台经理</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-12.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-12.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">维希雅</h4><p class="char-role">主持人</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <!-- <a href="./html/K1-13.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-13.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">卓拉</h4><p class="char-role">舞者</p><span class="char-link">详情 →</span></div>
+                    </a> -->
+                    <a href="./html/K1-14.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-14.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">Ozzy</h4><p class="char-role">道具师</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-15.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-15.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">斯嘉丽·维特尔斯巴赫</h4><p class="char-role">歌剧演员</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-16.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-16.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">陈萍</h4><p class="char-role">裁缝</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-17.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-17.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">汐亚维尔</h4><p class="char-role">歌剧院投资者</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-18.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-18.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">怜姬</h4><p class="char-role">指挥</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-19.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-19.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">Agnes</h4><p class="char-role">歌剧演员</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-20.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-20.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">伽拉泰亚·德维尔</h4><p class="char-role">声乐教练</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-21.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-21.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">伊特娜尔</h4><p class="char-role">歌剧院</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-22.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-22.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">尤浦西里</h4><p class="char-role">歌剧演员</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-23.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-23.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">托林</h4><p class="char-role">裁缝</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-24.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-24.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">以利亚</h4><p class="char-role">报幕人</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-25.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-25.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">艾莉斯·奥兹玛</h4><p class="char-role">舞美设计师</p><span class="char-link">详情 →</span></div>
+                    </a>
+                     <a href="./html/K1-26.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-26.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">拜恩·卡佩</h4><p class="char-role">小丑演员</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/K1-27.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/K1-27.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">诺恩·怀特</h4><p class="char-role">指挥</p><span class="char-link">详情 →</span></div>
+                    </a>
+                </div>
+            </div>
+            <button class="scroll-arrow right" data-scroll="opera-track">›</button>
+        </div>
+    </section>
+
+    <!-- ========== 侦探团阵营 ========== -->
+    <section class="camp-block">
+        <div class="camp-header">
+            <h2 class="camp-name">侦探<span>团</span></h2>
+            <p class="camp-summary">
+                由塞涅芙·赛利西亚带领，以调查歌剧院真相为唯一目标。成员可自由组队或单独行动，在疑点、证词与舞台阴影中接近被隐藏的答案。
+            </p>
+        </div>
+
+        <!-- NPC 区：左侧领袖固定 + 右侧普通NPC滑动 -->
+        <div class="group-header">
+            <h3 class="group-title">NPC</h3>
+        </div>
+
+        <div class="npc-wrap">
+            <!-- 左侧：领袖固定不动 -->
+            <div class="npc-leader-fixed">
+                <a href="./html/S.html" class="char-card leader">
+                    <div class="char-thumb">
+                        <picture>
+                                <!-- 屏幕小于900px，加载横版16:9图片 -->
+                                <source media="(max-width:900px)" srcset="img/index/S1.png">
+                                <!-- PC端加载3:4竖版原图 -->
+                                <img src="img/index/S.png" alt="塞涅芙">
+                            </picture>
+                        <span class="char-tag">领袖</span>
+                    </div>
+                    <div class="char-body">
+                        <h4 class="char-name">塞涅芙·赛利西亚</h4>
+                        <p class="char-role">侦探团领导者</p>
+                        <span class="char-link">查看档案 →</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 右侧：普通NPC可横向滚动 -->
+            <div class="npc-scroll-container">
+                <button class="npc-arrow left" data-npc-scroll="detective-npc-track">‹</button>
+                <div class="npc-scroll-box">
+                    <div class="npc-track" id="detective-npc-track">
+                        <a href="./html/S-01.html" class="char-card">
+                            <div class="char-thumb">
+                                <img src="img/index/S-01.png" alt="侦探团NPC" />
+                                <span class="char-tag">NPC</span>
+                            </div>
+                            <div class="char-body">
+                                <h4 class="char-name">橙</h4>
+                                <p class="char-role">犯罪心理实习生</p>
+                                <span class="char-link">查看档案 →</span>
+                            </div>
+                        </a>
+                        <a href="./html/S-02.html" class="char-card">
+                            <div class="char-thumb">
+                                <img src="img/index/S-02.png" alt="侦探团NPC" />
+                                <span class="char-tag">NPC</span>
+                            </div>
+                            <div class="char-body">
+                                <h4 class="char-name">查里斯·H·兰达</h4>
+                                <p class="char-role">个人身份赴约的警察</p>
+                                <span class="char-link">查看档案 →</span>
+                            </div>
+                        </a>
+                        <a href="./html/S-03.html" class="char-card">
+                            <div class="char-thumb">
+                                <img src="img/index/S-03.png" alt="侦探团NPC" />
+                                <span class="char-tag">NPC</span>
+                            </div>
+                            <div class="char-body">
+                                <h4 class="char-name">芮文·里德</h4>
+                                <p class="char-role">记者</p>
+                                <span class="char-link">查看档案 →</span>
+                            </div>
+                        </a>
+                        <a href="./html/S-04.html" class="char-card">
+                            <div class="char-thumb">
+                                <img src="img/index/S-04.png" alt="侦探团NPC" />
+                                <span class="char-tag">NPC</span>
+                            </div>
+                            <div class="char-body">
+                                <h4 class="char-name">吉他·约翰</h4>
+                                <p class="char-role">街头歌手</p>
+                                <span class="char-link">查看档案 →</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="npc-arrow right" data-npc-scroll="detective-npc-track">›</button>
+            </div>
+        </div>
+
+        <!-- 企友角色区（默认收起） -->
+        <div class="group-header">
+            <h3 class="group-title">阵营成员</h3>
+            <button class="toggle-btn collapsed" data-target="detective-member">▶</button>
+        </div>
+        <div class="member-wrap hidden" id="detective-member">
+            <button class="scroll-arrow left" data-scroll="detective-track">‹</button>
+            <div class="member-scroll-box">
+                <div class="member-track" id="detective-track">
+                    <a href="./html/S1-01.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-01.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">崔悯彦</h4><p class="char-role">留学生</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-02.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-02.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">阿尔郎·洛</h4><p class="char-role">记者&侦探助手</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-03.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-03.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">贝伦德·施泰因</h4><p class="char-role">作家</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-04.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-04.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">月</h4><p class="char-role">侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-05.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-05.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">临星</h4><p class="char-role">私家侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-06.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-06.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">余意</h4><p class="char-role">侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-07.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-07.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">洛姆巴德·萨默斯</h4><p class="char-role">交易顾问</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-08.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-08.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">雷恩·法缇菲勒</h4><p class="char-role">侦探/贵族养子</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-09.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-09.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">萨谬勒·法缇菲勒</h4><p class="char-role">资助人，勋爵</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-10.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-10.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">萨洛尔·法缇菲勒</h4><p class="char-role">天文学家/侦探助手</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-11.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-11.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">钱云舒</h4><p class="char-role">商人</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-12.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-12.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">雷克斯·凯恩</h4><p class="char-role">贵族子弟</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-13.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-13.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">塞刻涅·西斯</h4><p class="char-role">私家侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-14.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-14.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">法比安</h4><p class="char-role">私家侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-15.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-15.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">伊笛斯</h4><p class="char-role">商人之女</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-16.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-16.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">索拉维娅</h4><p class="char-role">私人侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-17.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-17.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">慕尔</h4><p class="char-role">助手侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-18.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-18.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">蕾拉</h4><p class="char-role">侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-19.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-19.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">叶青渊</h4><p class="char-role">侦探/大学生</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-20.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-20.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">蕾拉·德罗西</h4><p class="char-role">侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-21.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-21.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">辛德勒</h4><p class="char-role">侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-22.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-22.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">玛伊雅弥</h4><p class="char-role">鉴定师</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-23.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-23.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">吴悯</h4><p class="char-role">小说作者</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-24.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-24.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">诺克希斯</h4><p class="char-role">演员</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-25.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-25.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">西米</h4><p class="char-role">侦探（自封）</p><span class="char-link">详情 →</span></div>
+                    </a>
+                    <a href="./html/S1-26.html" class="char-card">
+                        <div class="char-thumb"><img src="img/index/S1-26.png" alt="企友角色" /><span class="char-tag">成员</span></div>
+                        <div class="char-body"><h4 class="char-name">劳伦斯·里德</h4><p class="char-role">咨询侦探</p><span class="char-link">详情 →</span></div>
+                    </a>
+                </div>
+            </div>
+            <button class="scroll-arrow right" data-scroll="detective-track">›</button>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>绯红帷幕之下 · 设定存档库</p>
+</footer>
+
+<script src="js/home.js"></script>
+
+</body>
+</html>
